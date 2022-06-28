@@ -105,6 +105,19 @@
 
     - requestUpdate()
     ```javascript
+    // example 1
+     private clearSelection (): void {
+        if (this.hasDataItems()) {
+          this.selectedDataItems.forEach((item: SelectDataItem) => this.composer.setItemPropertyValue(item, 'selected', false));
+        }
+        else {
+          this.selectedSlotItems.forEach(item => {
+            item.selected = false;
+          });
+        }
+        this.requestUpdate();
+      }
+    // example 2
     if (value !== oldValue) {
         this.requestUpdate('data', oldValue);
     }
