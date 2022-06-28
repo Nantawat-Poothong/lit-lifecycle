@@ -9,9 +9,10 @@
 - attributeChangedCallback()
 - adoptedCallback()
 
-###### Use cases
+###### Behavior & Use cases
 
 - constructor()
+    - Called when an element is created
     ```javascript
     constructor() {
         super();
@@ -21,6 +22,7 @@
     ```
     
 - connectedCallback()
+    - Invoked when a component is added to the document's DOM.
 
     ```javascript
     // example 1
@@ -37,6 +39,7 @@
     }
     ```
 - disconnectedCallback() 
+    - Invoked when a component is removed from the document's DOM.
     ```javascript
      // example 1
     override disconnectedCallback(): void {
