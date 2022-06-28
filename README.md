@@ -1,15 +1,15 @@
-###Lit Lifecycle
+### Lit Lifecycle
 ```javascript
     <my-element name="atom" />
 ```
-####Standard custom element lifecycle (inherite from Web Components standard)
+#### Standard custom element lifecycle (inherite from Web Components standard)
 - constructor()
 - connectedCallback()
 - disconnectedCallback() 
 - attributeChangedCallback()
 - adoptedCallback()
 
-######Use cases
+###### Use cases
 
 - constructor()
     ```javascript
@@ -80,7 +80,7 @@
     }
     ```
 
-####Reactive update cycle
+#### Reactive update cycle
 Triggering an update
 ![Pre-Update](https://lit.dev/images/docs/components/update-1.jpg)
 ![Pre-Update](https://lit.dev/images/docs/components/update-2.jpg)
