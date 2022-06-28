@@ -150,6 +150,11 @@
         - Without a super call, the element’s attributes and template will not update.
         - Reflects property values to attributes and calls render()
         - Generally, you should not need to implement this method.
+    ```javascript
+    protected update (changedProperties: PropertyValues): void {
+        super.update(changedProperties);
+    }
+    ```
     - render()
         - return TemplateResult
     ```javascript
@@ -209,6 +214,16 @@
     - hasUpdated
         - The hasUpdated property returns true if the component has updated at least once
         - perform work only if the component has not yet updated
+    ```javascript
+    override shouldUpdate (changedProperties: PropertyValues): boolean {
+        const isOpened = this.opened;
+        const isClosed = !this.opened;
+        const opening = changedProperties.has('opened') && isOpened;
+        const closing = changedProperties.has('opened') && isClosed;
+        
+        return opening || closing || !this.hasUpdated || changedProperties.size === 0;
+    }
+    ```
     - getUpdateComplete()
         - can override to wait child element
     ```javascript
