@@ -81,12 +81,12 @@
     ```
 
 #### Reactive update cycle
-Triggering an update
+###### Triggering an update
 ![Pre-Update](https://lit.dev/images/docs/components/update-1.jpg)
 ![Pre-Update](https://lit.dev/images/docs/components/update-2.jpg)
-Performing an update
+###### Performing an update
 ![Update](https://lit.dev/images/docs/components/update-3.jpg)
-Completing an update
+###### Completing an update
 ![Post-Update](https://lit.dev/images/docs/components/update-4.jpg)
 
 - Triggering an update
